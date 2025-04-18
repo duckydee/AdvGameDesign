@@ -15,3 +15,4 @@ MonoBehaviour:
   itemID: 2
   itemName: Gasoline
   itemIcon: {fileID: 21300000, guid: 3718b60c6a1bfbd4496d51bfa472225c, type: 3}
+  isStackable: 0
