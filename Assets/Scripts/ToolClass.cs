@@ -13,8 +13,10 @@ public class ToolClass : ItemClass
         hammer,
         ranged
     }
-    public override ItemClass GetItem() { return this; }
+    public override void Use(PlayerTestScript caller)
+    {
+        base.Use(caller);
+        Debug.Log("Swing sword");
+    }
     public override ToolClass GetTool() { return this; }
-    public override MiscClass GetMisc() { return null; }
-    public override ConsumableClass GetConsumable() { return null; }
 }

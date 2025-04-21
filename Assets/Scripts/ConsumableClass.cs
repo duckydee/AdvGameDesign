@@ -5,8 +5,12 @@ public class ConsumableClass : ItemClass
 {
     [Header("Consumable")] // data specific to consumable class
     public float healthAdded;
-    public override ItemClass GetItem() { return this; }
-    public override ToolClass GetTool() { return null; }
-    public override MiscClass GetMisc() { return null; }
+    public override void Use(PlayerTestScript caller)
+    {
+        base.Use(caller);
+        Debug.Log("Eat consumable");
+        //caller.inventory.ConsumeSelected();
+        caller.inventory.Remove(this);
+    }
     public override ConsumableClass GetConsumable() { return this; }
 }

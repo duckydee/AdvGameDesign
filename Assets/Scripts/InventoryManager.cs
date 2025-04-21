@@ -19,6 +19,9 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] private GameObject hotbarSelector;
     [SerializeField] private int selectedSlotIndex = 0;
+
+
+    private int rows = 1;
     public ItemClass selectedItem;
 
     private SlotClass[] items;
@@ -224,6 +227,11 @@ public class InventoryManager : MonoBehaviour
                 return items[i];
         }
         return null;
+    }
+    public void ConsumeSelected()
+    {
+        items[selectedSlotIndex + (0)].SubQuantity(1);
+        RefreshUI();
     }
     #endregion Inventory Utils
 

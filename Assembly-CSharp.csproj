@@ -9,8 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{89A3D1D0-569F-4E17-EE59-4CF3C1AC6B6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -63,21 +62,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TestScript.cs" />
-    <Compile Include="..\..\..\Downloads\InventoryManager.cs">
-      <Link>Assets\Scripts\InventoryManager.cs</Link>
-    </Compile>
+    <Compile Include="Assets\Scripts\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\ToolClass.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerTestScript.cs" />
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\ItemClass.cs" />
     <Compile Include="Assets\Scripts\MiscClass.cs" />
+    <Compile Include="Assets\Scripts\FlareGunClass.cs" />
     <Compile Include="Assets\Scripts\Unused Code\Inventory.cs" />
     <Compile Include="Assets\Scripts\Unused Code\ItemData.cs" />
     <Compile Include="Assets\Scripts\ConsumableClass.cs" />
-    <Compile Include="..\..\..\Downloads\SlotClass.cs">
-      <Link>Assets\Scripts\SlotClass.cs</Link>
-    </Compile>
+    <Compile Include="Assets\Scripts\SlotClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\kenney_voxel-pack\License.txt" />

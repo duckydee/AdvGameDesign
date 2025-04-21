@@ -4,8 +4,9 @@ using UnityEngine;
 public class MiscClass : ItemClass
 {
     // data specific to the misc class
-    public override ItemClass GetItem() { return this; }
-    public override ToolClass GetTool() { return null; }
+    public override void Use(PlayerTestScript caller)
+    {
+        //base.Use(caller);   
+    }
     public override MiscClass GetMisc() { return this; }
-    public override ConsumableClass GetConsumable() { return null; }
 }
