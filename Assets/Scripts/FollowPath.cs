@@ -2,6 +2,8 @@ using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class FollowPath : MonoBehaviour
 {
@@ -12,38 +14,58 @@ public class FollowPath : MonoBehaviour
     private int waypointIndex = 0;
     [SerializeField]
     private bool isLoop = true;
+    private Transform player;
+    private float dist;
+    public float howclose;
 
     private void Start()
     {
- 
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Update()
     {
-        Vector3 destination = waypoints[waypointIndex].transform.position;
-        Vector3 newPos = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
-        transform.position = newPos;
-
-        float distance = Vector3.Distance(transform.position, destination);
-
-        if (distance <= 0.1)
+        dist = Vector3.Distance(player.position, transform.position);
+        if (dist <= 1.25)
         {
-            if (waypointIndex < waypoints.Length - 1)
-            {
-                waypointIndex++;
-                print("Going to waypoint " + waypointIndex);
-            }
-            else
-            {
-                if (isLoop)
-                {
-                    print("Looping...");
-                    waypointIndex = 0;
-                }
-            }
+            
+        }
+        else if (dist <= howclose)
+        {
+            transform.LookAt(player);
+            GetComponent<Rigidbody>().AddForce(transform.forward * 3);
+            Vector3 destination = player.transform.position;
+            Vector3 newPos = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            transform.position = newPos;
         }
         else
         {
-            print(distance);
+            Vector3 destination = waypoints[waypointIndex].transform.position;
+            Vector3 newPos = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            transform.LookAt(waypoints[waypointIndex]);
+            transform.position = newPos;
+
+            float distance = Vector3.Distance(transform.position, destination);
+            
+            if (distance <= 0.1)
+            {
+                if (waypointIndex < waypoints.Length - 1)
+                {
+                    waypointIndex++;
+                    print("Going to waypoint " + waypointIndex);
+                }
+                else
+                {
+                    if (isLoop)
+                    {
+                        print("Looping...");
+                        waypointIndex = 0;
+                    }
+                }
+            }
+            else
+            {
+                print(distance);
+            }
         }
     }
 }
