@@ -1,3 +1,12 @@
 .vs\AdvGameDesign\FileContentIndex\
 Library\
 Artifacts\
+/.vs/AdvGameDesign/FileContentIndex
+/Library/Artifacts
+/obj/Debug
+/Logs
+/Library/ShaderCache/shader
+/Library/Search
+/Library/ScriptAssemblies
+/Library/Bee/artifacts
+*.vsidx
