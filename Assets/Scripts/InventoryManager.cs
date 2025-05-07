@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
@@ -12,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     // Inventory
     [SerializeField] private GameObject slotHolder;
     [SerializeField] private GameObject HotbarSlotHolder;
+    [SerializeField] private GameObject inventoryActive;
     [SerializeField] private ItemClass itemToAdd;
     [SerializeField] private ItemClass itemToRemove;
 
@@ -35,6 +37,7 @@ public class InventoryManager : MonoBehaviour
     private SlotClass tempSlot;
     private SlotClass originalSlot;
     bool isMovingItem;
+    bool InventoryState;
 
     private void Start()
     {
@@ -70,29 +73,35 @@ public class InventoryManager : MonoBehaviour
         if (isMovingItem)
             itemCursor.GetComponent<Image>().sprite = movingSlot.GetItem().itemIcon;
              
-
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            // find the Closest slot to cursor
-            if (isMovingItem)
-            {
-                EndItemMove();
-            }
-            else
-            {
-                BeginItemMove();
-            }
+            ToggleInventory();
         }
-        else if (Input.GetMouseButtonDown(1))
+        if (InventoryState)
         {
-            // find the Closest slot to cursor
-            if (isMovingItem)
+            if (Input.GetMouseButtonDown(0))
             {
-                EndItemMove_Single();
+                // find the Closest slot to cursor
+                if (isMovingItem)
+                {
+                    EndItemMove();
+                }
+                else
+                {
+                    BeginItemMove();
+                }
             }
-            else
+            else if (Input.GetMouseButtonDown(1))
             {
-                BeginItemMove_Half();
+                // find the Closest slot to cursor
+                if (isMovingItem)
+                {
+                    EndItemMove_Single();
+                }
+                else
+                {
+                    BeginItemMove_Half();
+                }
             }
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0) // scrolling up 
@@ -160,7 +169,19 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-
+    public void ToggleInventory()
+    {
+        if (inventoryActive.activeInHierarchy == false)
+        {
+            inventoryActive.SetActive(true);
+            InventoryState = true;
+        }
+        else
+        {
+            inventoryActive.SetActive(false);
+            InventoryState = false;
+        }
+    }
     public bool Add(ItemClass item, int quantity)
     {
         //  items.Add(item);
