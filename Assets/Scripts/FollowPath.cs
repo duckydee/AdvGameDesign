@@ -30,20 +30,14 @@ public class FollowPath : MonoBehaviour
             if (waypointIndex < waypoints.Length - 1)
             {
                 waypointIndex++;
-                print("Going to waypoint " + waypointIndex);
             }
             else
             {
                 if (isLoop)
                 {
-                    print("Looping...");
                     waypointIndex = 0;
                 }
             }
-        }
-        else
-        {
-            print(distance);
         }
     }
 }

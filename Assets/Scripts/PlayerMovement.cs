@@ -1,53 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.InputSystem;
+using UnityEngine.Animations;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem.Processors;
 
-public class PlayerMovement : MonoBehaviour
+public class Character_move : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed;
-    
-    public float groundDrag;
 
-    [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask whatIsGround;
-    bool grounded;
+    public CharacterController cha;
+    [SerializeField]
+    public float speed = 3.0F;
+    public float rotateSpeed = 3.0F;
 
-    public Transform orientation;
-    
-    float horizontalInput;
-    float verticalInput;
+    InputAction lookAction;
 
-    Vector3 moveDirection;
-    Rigidbody rb;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start(){
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+    private void Start()
+    {
+        lookAction = InputSystem.actions.FindAction("Look");
     }
 
-    // Update is called once per frame
-    private void Update(){
-        //Ground Check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight*0.5f+0.2f,whatIsGround);
+    void Update()
+    {
+        cha = GetComponent<CharacterController>();
         
-        //Get Inputs
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-
-        //Handle Drag
-        if (grounded){
-            rb.linearDamping = groundDrag;
-        }else{
-            rb.linearDamping = 0;
+        if (Input.GetAxis("Horizontal") != 0){
+           float rotvalue = (float)(1.8 * Input.GetAxis("Horizontal"));
+            cha.transform.Rotate(0, rotvalue, 0);
         }
-    }
-    private void FixedUpdate(){
-        //Calculate movement direction
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        print(cha.transform.rotation.y+"\t"+ Input.GetAxis("Horizontal"));
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-    }    
+        //rotate on y axis 
+
+        // move forward and backward
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+
+        float curSpeed = speed * Input.GetAxis("Vertical");
+        cha.SimpleMove(forward * curSpeed);
+    }
 }
