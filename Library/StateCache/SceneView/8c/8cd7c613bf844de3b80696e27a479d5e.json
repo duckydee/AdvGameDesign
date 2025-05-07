@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":595.0234375,"y":313.9409484863281,"z":3154.553466796875},"rotation":{"x":-0.007179930806159973,"y":0.005370231345295906,"z":0.0012141431216150523,"w":1.0009007453918458},"size":2290.09033203125,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-33.51819610595703,"y":-915.4303588867188,"z":401.43585205078127},"rotation":{"x":0.5284873843193054,"y":-0.025780681520700456,"z":0.014014525339007378,"w":0.8499727249145508},"size":612.0126342773438,"orthographic":false}
+>>>>>>> Map
