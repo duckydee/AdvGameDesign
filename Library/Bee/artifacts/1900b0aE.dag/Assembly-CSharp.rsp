@@ -404,6 +404,7 @@
 "Assets/Scripts/FollowPath.cs"
 "Assets/Scripts/InventoryManager.cs"
 "Assets/Scripts/ItemClass.cs"
+"Assets/Scripts/MainMenuScript.cs"
 "Assets/Scripts/MiscClass.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerCam.cs"
