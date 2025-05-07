@@ -3,18 +3,23 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
-
+using System.Threading.Tasks;
 public class CollideWithPlayer : MonoBehaviour
 {
-    public UnityEvent UnityEvent;
-    public GameObject theTrigger;
+    [SerializeField] private float damage;
     
-    public void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject == theTrigger)
+    async private void OnTriggerEnter(Collider other)
         {
-            UnityEvent.Invoke();
-            //Destroy(theTrigger.gameObject);
+        if (other.CompareTag("Player"))
+        {
+                Health player = other.GetComponent<Health>();
+                if (player != null) {
+                    
+                    player.TakeDamage(damage);
+                    await Task.Delay(500);
+                }
+                
+            }
+            
         }
-    }
 }

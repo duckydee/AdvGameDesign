@@ -1,10 +1,16 @@
 using UnityEngine;
 
-using UnityEngine;
-
-[CreateAssetMenu(fileName = "new TestScript Class", menuName = "Item/TestScript")]
-public class TestScript
+public class testScript : MonoBehaviour
 {
-    [Header("TestScript")] // data specific to consumable class
-    public float healthAdded;
+    [SerializeField] private float damage;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Health player = other.GetComponent<Health>();
+            player.TakeDamage(damage);
+        }
+    }
 }
+

@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public class FollowPath : MonoBehaviour
 {
@@ -17,17 +18,40 @@ public class FollowPath : MonoBehaviour
     private Transform player;
     private float dist;
     public float howclose;
-
+    private Animator skeleAnim;
+    public Transform hitbox;
+    public Transform hitboxReturn;
+    private bool attack;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        hitbox = GameObject.FindGameObjectWithTag("hitbox").transform;
+        hitboxReturn = GameObject.FindGameObjectWithTag("hitboxReturn").transform;
+        skeleAnim = GetComponent<Animator>();
+        attack = true;
     }
-    private void Update()
+    private async Task Update()
     {
         dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 1.25)
+        if (dist <= 1.5)
         {
-            
+            if(skeleAnim != null)
+            {
+                    skeleAnim.SetTrigger("attackTrig");
+                    moveSpeed = 0;
+                    await Task.Delay(1500);
+                    if(attack){
+                        hitbox.transform.position = transform.position;
+                        attack = false;
+                        resetAttack();
+                    }
+                        
+                    await Task.Delay(500);
+                    hitbox.transform.position = hitboxReturn.transform.position;
+                    
+                    moveSpeed = 2f;
+                   
+            }
         }
         else if (dist <= howclose)
         {
@@ -67,5 +91,11 @@ public class FollowPath : MonoBehaviour
                 print(distance);
             }
         }
+        
+    }
+    private async void resetAttack()
+    {
+        await Task.Delay(501);
+        attack = true;
     }
 }
