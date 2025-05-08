@@ -8,6 +8,8 @@ TagManager:
   - hitboxReturn
   - PlayerWaypoint
   - pickUp
+  - flare
+  - enemy
   layers:
   - Default
   - TransparentFX
