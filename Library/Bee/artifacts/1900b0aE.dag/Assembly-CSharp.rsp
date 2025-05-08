@@ -413,6 +413,7 @@
 "Assets/Scripts/ItemClass.cs"
 "Assets/Scripts/ItemObject.cs"
 "Assets/Scripts/MainMenuScript.cs"
+"Assets/Scripts/MenuButton.cs"
 "Assets/Scripts/MiscClass.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerCam.cs"
