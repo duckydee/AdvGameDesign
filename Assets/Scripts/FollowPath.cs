@@ -39,15 +39,14 @@ public class FollowPath : MonoBehaviour
             {
                     skeleAnim.SetTrigger("attackTrig");
                     moveSpeed = 0;
-                    await Task.Delay(1500);
+                    await Task.Delay(1000);
                     if(attack){
-                        hitbox.transform.position = transform.position;
                         attack = false;
+                        Instantiate(hitbox, transform.position, Quaternion.identity);
                         resetAttack();
                     }
                         
                     await Task.Delay(500);
-                    hitbox.transform.position = hitboxReturn.transform.position;
                     
                     moveSpeed = 2f;
                    
@@ -95,7 +94,7 @@ public class FollowPath : MonoBehaviour
     }
     private async void resetAttack()
     {
-        await Task.Delay(501);
+        await Task.Delay(500);
         attack = true;
     }
 }

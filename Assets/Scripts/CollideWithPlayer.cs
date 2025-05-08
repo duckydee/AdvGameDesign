@@ -16,10 +16,13 @@ public class CollideWithPlayer : MonoBehaviour
                 if (player != null) {
                     
                     player.TakeDamage(damage);
-                    await Task.Delay(500);
+                    Destroy(this.gameObject);
                 }
                 
-            }
-            
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
         }
 }

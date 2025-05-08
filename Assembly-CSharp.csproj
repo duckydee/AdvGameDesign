@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\CollideWithPlayer.cs" />
     <Compile Include="Assets\Scripts\Unused Code\Inventory.cs" />
+    <Compile Include="Assets\Scripts\skeleHealth.cs" />
     <Compile Include="Assets\Scripts\Unused Code\ItemData.cs" />
     <Compile Include="Assets\Scripts\ConsumableClass.cs" />
     <Compile Include="Assets\Scripts\MenuButton.cs" />

@@ -420,6 +420,7 @@
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PlayerTestScript.cs"
 "Assets/Scripts/PlayOnMove.cs"
+"Assets/Scripts/skeleHealth.cs"
 "Assets/Scripts/SlotClass.cs"
 "Assets/Scripts/TestScript.cs"
 "Assets/Scripts/ToolClass.cs"
