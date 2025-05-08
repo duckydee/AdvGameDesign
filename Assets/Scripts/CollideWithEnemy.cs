@@ -23,7 +23,7 @@ public class CollideWithEnemy : MonoBehaviour
                 
         }
         else if (this.CompareTag("flare")) {
-            m_Rigidbody.velocity = transform.forward * 10;
+            m_Rigidbody.linearVelocity = transform.forward * 10;
             if(other.CompareTag("Untagged")){
                  Destroy(this.gameObject);
             }
