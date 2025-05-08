@@ -20,13 +20,11 @@ public class FollowPath : MonoBehaviour
     public float howclose;
     private Animator skeleAnim;
     public Transform hitbox;
-    public Transform hitboxReturn;
     private bool attack;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("PlayerWaypoint").transform;
         hitbox = GameObject.FindGameObjectWithTag("hitbox").transform;
-        hitboxReturn = GameObject.FindGameObjectWithTag("hitboxReturn").transform;
         skeleAnim = GetComponent<Animator>();
         attack = true;
     }
@@ -91,6 +89,7 @@ public class FollowPath : MonoBehaviour
                 print(distance);
             }
         }
+        
         
     }
     private async void resetAttack()

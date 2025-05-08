@@ -44339,8 +44339,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1969134,
       "PayloadLength": 38110,
+=======
+      "PayloadOffset": 1968419,
+      "PayloadLength": 38139,
+>>>>>>> flare
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "InputFlags": [],
@@ -44356,7 +44361,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 2007331,
+=======
+      "PayloadOffset": 2006645,
+>>>>>>> flare
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -44645,8 +44654,10 @@
         "Assets/RogueNoodle/GBCamera/Example Elements/Scripts/RandomPalette.cs",
         "Assets/RogueNoodle/GBCamera/Example Elements/Scripts/RandomPaletteButton.cs",
         "Assets/RogueNoodle/GBCamera/Example Elements/Scripts/Rotate.cs",
+        "Assets/Scripts/CollideWithEnemy.cs",
         "Assets/Scripts/CollideWithPlayer.cs",
         "Assets/Scripts/ConsumableClass.cs",
+        "Assets/Scripts/fireFlare.cs",
         "Assets/Scripts/FlareGunClass.cs",
         "Assets/Scripts/FollowPath.cs",
         "Assets/Scripts/GateBehaviour.cs",
@@ -44973,6 +44984,10 @@
         0,
         0,
         0,
+<<<<<<< HEAD
+=======
+        0,
+>>>>>>> flare
         8
       ],
       "Outputs": [
@@ -45309,7 +45324,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 2007427,
+=======
+      "PayloadOffset": 2006741,
+>>>>>>> flare
       "PayloadLength": 12508,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
