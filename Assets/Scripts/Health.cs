@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -11,5 +12,9 @@ public class Health : MonoBehaviour
         playerHealth-= damage;
         hurtSound.Play();
         Debug.Log("Player health: "+ playerHealth);
+        if (playerHealth >= 0){
+            //Switch to game over screen
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

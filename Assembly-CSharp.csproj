@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Unused Code\Inventory.cs" />
     <Compile Include="Assets\Scripts\Unused Code\ItemData.cs" />
     <Compile Include="Assets\Scripts\ConsumableClass.cs" />
+    <Compile Include="Assets\Scripts\MenuButton.cs" />
     <Compile Include="Assets\Scripts\SlotClass.cs" />
   </ItemGroup>
   <ItemGroup>

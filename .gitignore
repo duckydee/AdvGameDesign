@@ -10,3 +10,4 @@ Artifacts\
 /Library/ScriptAssemblies
 /Library/Bee/artifacts
 *.vsidx
+/Library/Bee
