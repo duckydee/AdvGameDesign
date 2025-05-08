@@ -22,6 +22,15 @@ public class FollowPath : MonoBehaviour
     public Transform hitbox;
     public Transform hitboxReturn;
     private bool attack;
+    //[SerializeField]
+    //private GameObject prefab;
+    [SerializeField]
+    private Vector3 spawnPosition;
+    [SerializeField]
+    private bool random;
+
+
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("PlayerWaypoint").transform;
@@ -39,15 +48,16 @@ public class FollowPath : MonoBehaviour
             {
                     skeleAnim.SetTrigger("attackTrig");
                     moveSpeed = 0;
-                    await Task.Delay(1500);
+                    await Task.Delay(1000);
                     if(attack){
-                        hitbox.transform.position = transform.position;
+                        //hitbox.transform.position = transform.position;
+                        Instantiate(hitbox, transform.position, Quaternion.identity);
                         attack = false;
                         resetAttack();
                     }
                         
                     await Task.Delay(500);
-                    hitbox.transform.position = hitboxReturn.transform.position;
+                    //hitbox.transform.position = hitboxReturn.transform.position;
                     
                     moveSpeed = 2f;
                    
