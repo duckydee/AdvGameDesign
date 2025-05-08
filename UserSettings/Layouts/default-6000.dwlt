@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1520
     height: 757
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 55
+  controlID: 97
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 56
+  controlID: 46
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -399,7 +399,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Items
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -409,16 +409,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Items
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\mattc\Desktop\Advanced Game Design Project\AdvGameDesign
+  m_LastProjectPath: C:\Users\ellio\OneDrive\Documents\GitHub\AdvGameDesign
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 52}
-    m_SelectedIDs: 42820000
-    m_LastClickedID: 33346
-    m_ExpandedIDs: 00000000e681000000ca9a3bffffff7f
+    m_SelectedIDs: e0810000
+    m_LastClickedID: 33248
+    m_ExpandedIDs: 00000000e081000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -447,7 +447,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e6810000
+    m_ExpandedIDs: 00000000e0810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -595,7 +595,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c2faffff
+      m_ExpandedIDs: d6faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1115,9 +1115,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 2.1128442, y: 1.3293655, z: -8.956725}
+    m_Target: {x: 3.500191, y: -0.4445274, z: -8.353516}
     speed: 2
-    m_Value: {x: 2.1128442, y: 1.3293655, z: -8.956725}
+    m_Value: {x: 3.500191, y: -0.4445274, z: -8.353516}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1163,13 +1163,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12503427, y: 0.71058065, z: -0.13061525, w: -0.6800201}
+    m_Target: {x: -0.34803367, y: 0.56827223, z: -0.28744653, w: -0.68801296}
     speed: 2
-    m_Value: {x: -0.12503427, y: 0.71058065, z: -0.13061525, w: -0.6800201}
+    m_Value: {x: -0.34656265, y: 0.5697213, z: -0.28710702, w: -0.6876638}
   m_Size:
     m_Target: 1.971333
     speed: 2
-    m_Value: 1.8864431
+    m_Value: 1.971333
   m_Ortho:
     m_Target: 0
     speed: 2
