@@ -6,7 +6,12 @@ TagManager:
   tags:
   - hitbox
   - hitboxReturn
+<<<<<<< HEAD
   - PlayerWaypoint
+=======
+  - worldItem
+  - pickUp
+>>>>>>> ItemPickUpDrop
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - noCollide
   - whatIsGround
   - 
   - 

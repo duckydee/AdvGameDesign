@@ -27,7 +27,7 @@ public class Character_move : MonoBehaviour
            float rotvalue = (float)(1.8 * Input.GetAxis("Horizontal"));
             cha.transform.Rotate(0, rotvalue, 0);
         }
-        print(cha.transform.rotation.y+"\t"+ Input.GetAxis("Horizontal"));
+        //print(cha.transform.rotation.y+"\t"+ Input.GetAxis("Horizontal"));
 
         //rotate on y axis 
 
