@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\GeneratorScript.cs" />
+    <Compile Include="Assets\Scripts\GateBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\RogueNoodle\GBCamera\Example Elements\Scripts\RandomPaletteButton.cs" />
     <Compile Include="Assets\Scripts\PlayerTestScript.cs" />

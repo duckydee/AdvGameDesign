@@ -407,6 +407,7 @@
 "Assets/Scripts/ConsumableClass.cs"
 "Assets/Scripts/FlareGunClass.cs"
 "Assets/Scripts/FollowPath.cs"
+"Assets/Scripts/GateBehaviour.cs"
 "Assets/Scripts/GeneratorScript.cs"
 "Assets/Scripts/Health.cs"
 "Assets/Scripts/hit.cs"
