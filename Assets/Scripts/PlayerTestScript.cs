@@ -13,14 +13,6 @@ public class PlayerTestScript : MonoBehaviour
                 inventory.selectedItem.Use(this);
             }
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //use item
-            if (inventory.selectedItem != null)
-            {
-                inventory.selectedItem.Drop(this);
-            }
-        }
     }
 
 }

@@ -8,19 +8,10 @@ public class ItemClass : ScriptableObject
     public string itemName;
     public Sprite itemIcon;
     public bool isStackable = true;
-    public GameObject selfReference;
 
-    public virtual void ReferenceSelf(Object selfReference)
-    {
-
-    }
     public virtual void Use(PlayerTestScript caller)
     {
         Debug.Log("Used Item");
-    }
-    public virtual void Drop(PlayerTestScript caller)
-    {
-        Debug.Log("Item Dropped");
     }
     public virtual ItemClass GetItem()
     {
