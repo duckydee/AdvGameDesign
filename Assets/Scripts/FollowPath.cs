@@ -24,7 +24,7 @@ public class FollowPath : MonoBehaviour
     private bool attack;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("PlayerWaypoint").transform;
         hitbox = GameObject.FindGameObjectWithTag("hitbox").transform;
         hitboxReturn = GameObject.FindGameObjectWithTag("hitboxReturn").transform;
         skeleAnim = GetComponent<Animator>();

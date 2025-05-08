@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hitbox
   - hitboxReturn
+  - PlayerWaypoint
   layers:
   - Default
   - TransparentFX

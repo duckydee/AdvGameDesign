@@ -12,7 +12,6 @@ public class Character_move : MonoBehaviour
     [SerializeField]
     public float speed = 3.0F;
     public float rotateSpeed = 3.0F;
-
     InputAction lookAction;
 
     private void Start()
@@ -34,8 +33,8 @@ public class Character_move : MonoBehaviour
 
         // move forward and backward
         Vector3 forward = transform.TransformDirection(Vector3.forward);
-
         float curSpeed = speed * Input.GetAxis("Vertical");
         cha.SimpleMove(forward * curSpeed);
+        
     }
 }
