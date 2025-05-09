@@ -9,6 +9,8 @@ public class GeneratorScript : MonoBehaviour
     [SerializeField] private GameObject gate;
     [SerializeField] private GameObject door;
     private bool activated;
+    public AudioSource genSound;
+    public AudioSource doorSound;
     void Update()
     {
         if (gasoline != null)
@@ -18,6 +20,7 @@ public class GeneratorScript : MonoBehaviour
                 inventory.Remove(inventory.selectedItem);
                 activated = true;
                 Debug.Log("Gas Used, Gate Opened");
+                genSound.Play();
                 gate.SetActive(false);
             }
         }
@@ -27,6 +30,7 @@ public class GeneratorScript : MonoBehaviour
             {
                 inventory.Remove(inventory.selectedItem);
                 activated = true;
+                doorSound.Play();
                 Debug.Log("key used, door destroyed");
                 door.SetActive(false);
             }

@@ -12,6 +12,8 @@ public class fireFlare : MonoBehaviour
     [SerializeField] ItemClass key;
     [SerializeField] ItemClass syringe;
     [SerializeField] Health health;
+    public AudioSource flareSound;
+    public AudioSource swordSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +30,7 @@ public class fireFlare : MonoBehaviour
             {
                 Instantiate(flare, transform.position, transform.rotation);
                 inventory.Remove(inventory.selectedItem);
+                flareSound.Play();
             }
         }
         if (inventory.selectedItem == knife)
@@ -35,6 +38,7 @@ public class fireFlare : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Instantiate(slash, transform.position, transform.rotation);
+                swordSound.Play();
             }
         }
         if (inventory.selectedItem == syringe)

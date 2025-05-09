@@ -31,12 +31,13 @@ public class FollowPath : MonoBehaviour
     private async Task Update()
     {
         dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= 1.5)
+        if (dist <= 2)
         {
             if(skeleAnim != null)
             {
-                    skeleAnim.SetTrigger("attackTrig");
+                    
                     moveSpeed = 0;
+                    skeleAnim.SetTrigger("attackTrig");
                     await Task.Delay(1000);
                     if(attack){
                         attack = false;
@@ -44,7 +45,7 @@ public class FollowPath : MonoBehaviour
                         resetAttack();
                     }
                         
-                    await Task.Delay(500);
+                    await Task.Delay(1000);
                     
                     moveSpeed = 2f;
                    
@@ -91,7 +92,7 @@ public class FollowPath : MonoBehaviour
         }
     private async void resetAttack()
     {
-        await Task.Delay(500);
+        await Task.Delay(1000);
         attack = true;
     }
 }
