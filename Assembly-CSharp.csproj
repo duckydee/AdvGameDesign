@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\hit.cs" />
+    <Compile Include="Assets\Scripts\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\TestScript.cs" />
     <Compile Include="Assets\Scripts\fireFlare.cs" />
     <Compile Include="Assets\Scripts\CollideWithEnemy.cs" />
