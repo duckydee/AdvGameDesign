@@ -5,16 +5,31 @@ public class GeneratorScript : MonoBehaviour
     private bool canBePressed;
     [SerializeField] private InventoryManager inventory;
     [SerializeField] private ItemClass gasoline;
+    [SerializeField] private ItemClass key;
     [SerializeField] private GameObject gate;
+    [SerializeField] private GameObject door;
     private bool activated;
     void Update()
     {
-        if(canBePressed && inventory.selectedItem == gasoline && Input.GetKeyDown(KeyCode.E))
+        if (gasoline != null)
         {
-            inventory.Remove(inventory.selectedItem);
-            activated = true;
-            Debug.Log("Gas Used, Gate Opened");
-            gate.SetActive(false);
+            if (canBePressed && inventory.selectedItem == gasoline && Input.GetKeyDown(KeyCode.Space))
+            {
+                inventory.Remove(inventory.selectedItem);
+                activated = true;
+                Debug.Log("Gas Used, Gate Opened");
+                gate.SetActive(false);
+            }
+        }
+        if (key != null) 
+        {
+            if (canBePressed && inventory.selectedItem == key && Input.GetKeyDown(KeyCode.Space))
+            {
+                inventory.Remove(inventory.selectedItem);
+                activated = true;
+                Debug.Log("key used, door destroyed");
+                door.SetActive(false);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -9,7 +9,7 @@ public class ItemObject : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y)) 
+        if (Input.GetKeyDown(KeyCode.E)) 
         {
             if (canBePressed)
             {

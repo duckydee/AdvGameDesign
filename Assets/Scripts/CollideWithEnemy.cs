@@ -24,8 +24,28 @@ public class CollideWithEnemy : MonoBehaviour
         }
         else if (this.CompareTag("flare")) {
             m_Rigidbody.linearVelocity = transform.forward * 10;
-            if(other.CompareTag("Untagged")){
+            Destroy(this.gameObject, 20f);
+            if (other.CompareTag("Untagged")){
                  Destroy(this.gameObject);
+            }
+        }
+        else if (this.CompareTag("slash"))
+        {
+            m_Rigidbody.linearVelocity = transform.forward * 10;
+            Destroy(this.gameObject, 0.1f);
+            if (other.CompareTag("Untagged"))
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (this.CompareTag("Unlock"))
+        {
+            m_Rigidbody.linearVelocity = transform.forward * 10;
+            Destroy(this.gameObject, 1f);
+            if (other.CompareTag("Untagged"))
+            {
+                other.gameObject.SetActive(false);
+                Destroy(this.gameObject);
             }
         }
         else
